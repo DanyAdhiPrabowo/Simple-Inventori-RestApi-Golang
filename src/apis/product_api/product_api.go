@@ -11,7 +11,10 @@ import (
 	"github.com/gorilla/mux"
 )
 
-func FindAll(response http.ResponseWriter, request *http.Request) {
+func GetProduct(response http.ResponseWriter, request *http.Request) {
+	id := request.URL.Query().Get("id_category")
+	id_category, _ := strconv.ParseInt(id, 10, 64)
+	// log.Printf("idnya adalah %v", id_category)
 	db, err := config.GetDB()
 	if err != nil {
 		respondWithError(response, http.StatusBadRequest, err.Error())
@@ -19,7 +22,7 @@ func FindAll(response http.ResponseWriter, request *http.Request) {
 		productModel := models.ProductModel{
 			Db: db,
 		}
-		products, err2 := productModel.FindAll()
+		products, err2 := productModel.GetProduct(id_category)
 		if err2 != nil {
 			respondWithError(response, http.StatusBadRequest, err2.Error())
 		} else {

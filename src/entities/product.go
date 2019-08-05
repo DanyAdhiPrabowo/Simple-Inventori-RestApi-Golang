@@ -7,14 +7,14 @@ type Product struct {
 	Name     string  `json:"name"`
 	Price    float64 `json:"price"`
 	Quantity int     `json:"quantity"`
-	Category int     `json:"id_category"`
+	Category string  `json:"id_category"`
 }
 
 type ProductEdit struct {
 	Name     string  `json:"name"`
 	Price    float64 `json:"price"`
 	Quantity int     `json:"quantity"`
-	Category int     `json:"id_category"`
+	Category string  `json:"id_category"`
 }
 
 func (product Product) toString() string {
