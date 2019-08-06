@@ -1,13 +1,8 @@
 format input
 
 {
-
-"name" : "Bukan Minyak Goreng",
-
-"price": 60,
-
-"quantity" : 6,
-
-"id_category" : 1
-
+  "name" : "Minyak Goreng",
+  "price": 60,
+  "quantity" : 6,
+  "id_category" : 1
 }
