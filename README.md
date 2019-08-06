@@ -19,7 +19,6 @@ This is my first RestApi made with the Golang programming language, this restapi
 
 
 ## Installation
-### Clone
 ```
 $ git clone https://github.com/DanyAdhiPrabowo/Simple-Inventori-RestApi-Golang/
 $ Open file main.go on terminal
